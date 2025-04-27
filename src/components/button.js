@@ -8,9 +8,13 @@ function Button() {
       setClicked(!clicked);
 }
 return(
-    <div className="button">
-        <button>click me</button>
-        
-    </div>
+    <div className="button-container">
+    <button
+      className={clicked ? "clicked" : ""}
+      onClick={handleClick}
+    >
+      Click Me
+    </button>
+  </div>
 )
 }
