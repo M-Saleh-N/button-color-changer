@@ -37,7 +37,22 @@ function Button() {
     { name: "Watermelon", code: "#F9A7B0" },
   ];
 
-
+  return (
+    <div className="container" style={{ backgroundColor: pastel }}>
+      <h1>Choose a color you prefer</h1>
+      <div className="button-wrapper">
+        {colors.map((color) => (
+          <button
+            key={color.name}
+            className="color-button"
+            onClick={() => setPastel(color.code)}
+          >
+            {color.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Button;
